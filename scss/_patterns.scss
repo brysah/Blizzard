@@ -9,23 +9,63 @@
     color: #FFFFFF;
     border: 1px solid transparent;
     transition: background-color .3s, color .3s;
-    img{
+
+    img {
         margin-right: 0.8rem;
     }
 
     &-primary {
         background-color: $primary-default;
-        border-color:$primary-default;
-        &:hover{
+        border-color: $primary-default;
+
+        &:hover {
             background-color: $primary-light;
         }
     }
 
     &-outline {
         border-color: #FFFFFF;
-        &:hover{
+
+        &:hover {
             color: $neutral-200;
             background-color: #FFFFFF;
+        }
+    }
+}
+
+.game-card {
+    display: block;
+    width: 100%;
+    max-width: 28rem;
+
+    .image {
+        overflow: hidden;
+        border-radius: 4px;
+        width: 100%;
+        height: 38.4rem;
+        margin-bottom: 2.4rem;
+        transition: transform .3s ease-in;
+    }
+
+    .info {
+        h3 {
+            color: #FFFFFF;
+            font-weight: 600;
+            font-size: 1.8rem;
+            line-height: 2.7rem;
+            margin-bottom: 0.4rem;
+        }
+
+        span {
+            font-size: 1.4rem;
+            line-height: 2.1rem;
+            color: #FFFFFF;
+            opacity: 0.8;
+        }
+    }
+    &:hover{
+        .image{
+            transform: scale(1.05);
         }
     }
 }
