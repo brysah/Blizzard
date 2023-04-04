@@ -1,0 +1,31 @@
+.btn {
+    padding: 0px 1.6rem;
+    line-height: 4.1rem;
+    display: inline-flex;
+    align-items: center;
+    border-radius: 3px;
+    font-weight: 500;
+    font-size: 1.4rem;
+    color: #FFFFFF;
+    border: 1px solid transparent;
+    transition: background-color .3s, color .3s;
+    img{
+        margin-right: 0.8rem;
+    }
+
+    &-primary {
+        background-color: $primary-default;
+        border-color:$primary-default;
+        &:hover{
+            background-color: $primary-light;
+        }
+    }
+
+    &-outline {
+        border-color: #FFFFFF;
+        &:hover{
+            color: $neutral-200;
+            background-color: #FFFFFF;
+        }
+    }
+}
