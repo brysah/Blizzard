@@ -35,7 +35,7 @@ gulp.task('allJs',gulpJs);
 
 function pluginsJs(){
     return gulp
-    .src(['js/lib/aos.min.js','js/lib/swiper.min.js'])
+    .src(['js/lib/swiper.min.js'])
     .pipe(concat('plugins.js'))
     .pipe(gulp.dest('js/'))
 }
@@ -51,5 +51,5 @@ function watch(){
 
 gulp.task('watch',watch);
 
-//gulp.task('default', gulp.parallel('watch','sass','pluginCss' ,'allJs','pluginJs'));
-gulp.task('default', gulp.parallel('watch','sass','allJs'));
+gulp.task('default', gulp.parallel('watch','sass','pluginCss' ,'allJs','pluginJs'));
+//gulp.task('default', gulp.parallel('watch','sass','allJs'));
