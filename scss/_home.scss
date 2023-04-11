@@ -308,6 +308,7 @@
     background-size: cover;
 
     .container {
+        position: relative;
         .text-left {
             width: 100%;
             max-width: 29.9rem;
@@ -383,6 +384,27 @@
                 }
             }
 
+        }
+        .image{
+            top: 9.9rem;
+            right: -27.5rem;
+            position: absolute;
+            max-width: 106.6rem;
+            width: 100%;
+            height: 61rem;
+            .img-lg{
+                position: absolute;
+                top: 0;
+                left: 0;
+                animation: float 8s ease-in-out infinite;
+            }
+            .img-sm{
+                position: absolute;
+                right: 5.3rem;
+                bottom: -2.8rem;
+                animation: float 6s ease-in-out infinite;
+
+            }
         }
     }
 }
