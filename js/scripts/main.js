@@ -39,6 +39,12 @@ allFilters.forEach((filter , index) => {
 
 const btnOpenModal = document.querySelector('.js-open-modal');
 const btnCloseModal = document.querySelector('.js-close-modal');
+const overlayModal = document.querySelector('.js-overlay');
+
+overlayModal.addEventListener('click',() => {
+    let tagHtml = document.documentElement;
+    tagHtml.classList.remove('show-modal');
+})
 
 btnCloseModal.addEventListener('click',() => {
     let tagHtml = document.documentElement;
