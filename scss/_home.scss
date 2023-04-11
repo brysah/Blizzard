@@ -228,13 +228,15 @@
                         &:not(:first-child) {
                             margin-left: 2.4rem;
                         }
-                        a{
-                            img{
+
+                        a {
+                            img {
                                 opacity: 0.5;
                                 transition: opacity .3s;
                             }
-                            &.active{
-                                img{
+
+                            &.active {
+                                img {
                                     opacity: 1;
                                 }
                             }
@@ -298,12 +300,101 @@
     }
 }
 
-@keyframes fadeUp{
-    from{
+.s-download {
+    width: 100%;
+    height: 85rem;
+    background: url("../img/bg-download.png") no-repeat center center;
+    overflow: hidden;
+    background-size: cover;
+
+    .container {
+        .text-left {
+            width: 100%;
+            max-width: 29.9rem;
+            padding-top: 13.2rem;
+
+            .logo {
+                margin-bottom: 3rem;
+            }
+
+            h2 {
+                font-weight: 700;
+                font-size: 3.2rem;
+                line-height: 110.2%;
+                color: #FFFFFF;
+                margin-bottom: 3rem;
+            }
+
+            ul {
+                margin-bottom: 4.2rem;
+
+                li {
+                    display: flex;
+                    align-items: center;
+
+                    &:not(:last-child) {
+                        margin-bottom: 2.4rem;
+                    }
+
+                    .icon {
+                        width: 1.8rem;
+                        height: 1.8rem;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        margin-right: 1.6rem;
+                    }
+
+                    p {
+                        font-weight: 400;
+                        font-size: 1.8rem;
+                        line-height: 178.2%;
+                        color: #828792;
+                    }
+                }
+            }
+
+            .btn {
+                padding: 0rem 4rem;
+                line-height: 5.2rem;
+                font-size: 1.6rem;
+                font-weight: 600;
+                margin-bottom: 4.9rem;
+            }
+
+            .app {
+                display: flex;
+                align-items: center;
+
+                p {
+                    font-weight: 600;
+                    font-size: 1.4rem;
+                    line-height: 2.1rem;
+                    color: #E5E5E5;
+                    max-width: 19rem;
+                    margin-left: 1.8rem;
+                    a{
+                        text-decoration: underline;
+                        transition: color .3s;
+                        &:hover{
+                            color: $primary-light;
+                        }
+                    }
+                }
+            }
+
+        }
+    }
+}
+
+
+@keyframes fadeUp {
+    from {
         opacity: 0;
         transform: translateY(20px);
     }
-    to{
+
+    to {
         opacity: 1;
         transform: translateY(0);
     }
