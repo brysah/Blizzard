@@ -179,11 +179,13 @@
 .s-games {
     padding-top: 8.3rem;
     padding-bottom: 11rem;
+
     .container {
         .top {
             display: flex;
             align-items: flex-end;
             justify-content: space-between;
+            margin-bottom: 7.8rem;
 
             .left-top {
                 display: flex;
@@ -226,6 +228,17 @@
                         &:not(:first-child) {
                             margin-left: 2.4rem;
                         }
+                        a{
+                            img{
+                                opacity: 0.5;
+                                transition: opacity .3s;
+                            }
+                            &.active{
+                                img{
+                                    opacity: 1;
+                                }
+                            }
+                        }
                     }
                 }
 
@@ -243,5 +256,55 @@
                 }
             }
         }
+
+        .tab-games-content {
+            .tab-pane-games {
+                display: none;
+
+                &.active {
+                    display: grid;
+                    grid-template-columns: repeat(4, 1fr);
+                    grid-gap: 4.7rem 3.2rem;
+                    animation: fadeUp .4s forwards;
+                }
+
+                .card-all-games {
+                    width: 100%;
+                    max-width: 28rem;
+                    height: 38.4rem;
+                    border: 1.5px solid #212428;
+                    border-radius: 4px;
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    justify-content: center;
+
+                    span {
+                        display: flex;
+                        align-items: center;
+                        margin-top: 3.4rem;
+                        font-weight: 600;
+                        font-size: 1.72rem;
+                        line-height: 2.6rem;
+                        color: #FFFFFF;
+
+                        img {
+                            margin-right: 1.3rem;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@keyframes fadeUp{
+    from{
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to{
+        opacity: 1;
+        transform: translateY(0);
     }
 }
