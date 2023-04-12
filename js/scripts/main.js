@@ -2,7 +2,16 @@ var slide_thumbnail = new Swiper(".slide-thumbnail", {
     slidesPerView: 5,
     direction: 'vertical',
     spaceBetweem: 20,
-    watchSlidesProgress: true
+    watchSlidesProgress: true,
+    breakpoints:{
+        320: {
+            direction:'horizontal'
+        },
+        1050:{
+            direction: 'vertical'
+        }
+
+    }
 });
 
 
