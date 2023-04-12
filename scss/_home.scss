@@ -565,6 +565,47 @@
             }
         }
     }
+
+    @media (max-width:991px) {
+        .container{
+            .text-left{
+                max-width: 29.9rem;
+                h2{
+                    font-size: 3.2rem;
+                    margin-bottom: 3rem;
+                }
+                
+            }
+            .image{
+                right: -35rem;
+            }
+        }
+    }
+    
+    @media (max-width:560px) {
+        height: auto;
+        padding-bottom: 5rem;
+        .container{
+            .text-left{
+                padding-top: 6.3rem;
+                margin-bottom: 4rem;
+                h2{
+                    font-size: 2.8rem;
+                }
+            }
+            .image{
+                height: 27rem;
+                position: relative;
+                top: 0;
+                right: 0;
+                .img-sm{
+                    right: 0;
+                    bottom: 0;
+                    max-width: 27.6rem;
+                }
+            }
+        }
+    }
 }
 
 .show-modal{
