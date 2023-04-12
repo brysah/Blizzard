@@ -56,3 +56,30 @@ btnOpenModal.addEventListener('click',(event) =>{
     let tagHtml = document.documentElement;
     tagHtml.classList.add('show-modal');
 });
+
+const btnMenu = document.querySelectorAll('.js-btn-menu');
+const menu = document.querySelectorAll('.js-menu');
+
+btnMenu.forEach( (btn,index) => {
+    btn.addEventListener('click', (event) => {
+        event.preventDefault();
+
+        menu.forEach( item =>{
+            item.classList.remove('active');
+            item.addEventListener('mouseleave', () => {
+                item.classList.remove('active');
+                btnMenu.forEach( item => {
+                    item.classList.remove('active');
+                })
+            })
+        })
+
+        btnMenu.forEach( item => {
+            item.classList.remove('active');
+        })
+
+        btn.classList.add('active');
+        menu[index].classList.add('active');
+    })
+})
+
